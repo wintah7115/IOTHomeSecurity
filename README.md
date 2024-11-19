@@ -4,7 +4,7 @@ Home Security System for IOT Sec
 enter python enviroment with "source ./tmp/.venv/bin/activate"
 create .env file in Scripts folder with the following format:
 
-NESSUS_URL = https://<URL>:8834/                                                                                                                                                                                                                              
+NESSUS_URL = https://(URL):8834/                                                                                                                                                                                                                              
 ACCESS_KEY = Access Key                                                                                                                                                                                                                              
 SECRET_KEY = Secret key                                                                                                                                                                                                                               
 NESSUS_USERNAME = User                                                                                                                                                                                                                               
