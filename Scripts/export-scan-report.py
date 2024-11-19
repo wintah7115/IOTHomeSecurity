@@ -67,7 +67,7 @@ def download_report(token, scan_id, file_id, file_name):
     headers = {"X-Cookie": f"token={token}"}
     response = requests.get(url, headers=headers, verify=False)
     
-    with open(f"/home/{USER}/Desktop/{file_name}", "wb") as f:
+    with open(f"../Scans/{file_name}", "wb") as f:
         f.write(response.content)
 
 # Main script
