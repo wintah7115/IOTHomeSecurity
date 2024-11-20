@@ -1,6 +1,10 @@
 # IOTHomeSecurity
 Home Security System for IOT Sec
-
+- Clone the Repo
+```bash
+git clone https://github.com/wintah7115/IOTHomeSecurity
+cd IOTHomeSecurity
+```
 - download pipenv using
 ```bash
 sudo apt-get install pipenv
