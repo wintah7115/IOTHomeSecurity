@@ -15,7 +15,7 @@ pipenv install
 ```
 - then run 
 ```bash
-pipenv run python export-scan-report.py
+pipenv run python exportscanreport.py
 ```
 
 - create .env file in Scripts folder with the following format:
