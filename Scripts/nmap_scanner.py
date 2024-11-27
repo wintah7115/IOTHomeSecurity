@@ -30,7 +30,7 @@ class NmapScanner:
     def _process_results(self, scan_results: Dict) -> Dict:
         """Process and format the Nmap scan results."""
         processed_results = {
-            'timestamp': datetime.now().isoformat(),
+            'timestamp': datetime.now(),
             'hosts': []
         }
         
@@ -57,7 +57,7 @@ class NmapScanner:
                     host_info['ports'].append(port_data)
             
             processed_results['hosts'].append(host_info)
-            
+ #           print(processed_results['timestamp'])
         return processed_results
         
     def generate_html_report(self, results: Dict, output_file: str) -> None:
@@ -120,7 +120,7 @@ class NmapScanner:
         </html>
         """
         
-        with open(output_file, 'w', encoding='utf-8') as f:
+        with open(f"../Scans/{output_file}", 'w', encoding='utf-8') as f:
             f.write(html_content)
 
 def main():
@@ -128,7 +128,7 @@ def main():
     target = os.getenv("NMAP_TARGET", "192.168.1.0/24")
     ports = os.getenv("NMAP_PORTS", "1-1024")
     arguments = os.getenv("NMAP_ARGS", "-sV -sS")
-    output_file = os.getenv("NMAP_REPORT", "../nmap_report.html")
+    output_file = os.getenv("NMAP_REPORT", "nmap_report.html")
     
     scanner = NmapScanner()
     results = scanner.scan_network(target, ports, arguments)
