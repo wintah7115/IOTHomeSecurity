@@ -1,27 +1,34 @@
 
-        <!DOCTYPE html>
-        <html>
-        <head>
-            <title>Network Scan Report</title>
-            <style>
-                body { font-family: Arial, sans-serif; margin: 20px; }
-                table { border-collapse: collapse; width: 100%; }
-                th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
-                th { background-color: #f2f2f2; }
-                .host-section { margin-bottom: 30px; }
-                .timestamp { color: #666; margin-bottom: 20px; }
-            </style>
-        </head>
-        <body>
-            <h1>Network Scan Report</h1>
-            <div class="timestamp">Scan performed at: 2024-11-27T16:28:04.377304</div>
-        
+            <!DOCTYPE html>
+            <html>
+            <head>
+                <title>Network Security Scan Report</title>
+                <style>
+                    body { font-family: Arial, sans-serif; margin: 20px; }
+                    table { border-collapse: collapse; width: 100%; margin-bottom: 20px; }
+                    th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+                    th { background-color: #f2f2f2; }
+                    .host-section { margin-bottom: 30px; padding: 20px; border: 1px solid #eee; }
+                    .timestamp { color: #666; margin-bottom: 20px; }
+                    .vulnerability { background-color: #fff3f3; padding: 10px; margin: 5px 0; }
+                    .high-severity { border-left: 5px solid #ff4444; }
+                    .medium-severity { border-left: 5px solid #ffaa33; }
+                    .low-severity { border-left: 5px solid #ffdd33; }
+                    .ssl-info { background-color: #f8f9fa; padding: 10px; margin: 5px 0; }
+                </style>
+            </head>
+            <body>
+                <h1>Network Security Scan Report</h1>
+                <div class="timestamp">Scan performed at: 2024-11-27T20:00:00.999669</div>
+            
             <div class="host-section">
                 <h2>Host: 192.168.1.64</h2>
                 <p>Hostname: pi.hole</p>
                 <p>State: up</p>
+                <p>MAC Address: D8:3A:DD:B5:66:A0</p>
+                <p>Vendor: Raspberry Pi Trading</p>
                 
-                <h3>Open Ports:</h3>
+                <h3>Open Ports and Services:</h3>
                 <table>
                     <tr>
                         <th>Port</th>
@@ -29,41 +36,87 @@
                         <th>Service</th>
                         <th>Version</th>
                         <th>Product</th>
+                        <th>Extra Info</th>
                     </tr>
-            
+        
                     <tr>
                         <td>22</td>
                         <td>open</td>
                         <td>ssh</td>
                         <td>9.2p1 Debian 2+deb12u3</td>
                         <td>OpenSSH</td>
+                        <td>protocol 2.0</td>
                     </tr>
-                
+            
                     <tr>
                         <td>53</td>
                         <td>open</td>
                         <td>domain</td>
                         <td></td>
                         <td></td>
+                        <td>generic dns response: no error</td>
                     </tr>
-                
+            
                     <tr>
                         <td>80</td>
                         <td>open</td>
                         <td>http</td>
                         <td>1.4.69</td>
                         <td>lighttpd</td>
+                        <td></td>
                     </tr>
+            </table>
+<h3>Identified Vulnerabilities:</h3>
+                <div class="vulnerability high-severity">
+                    <h4>CVE-2023-38408</h4>
+                    <p>CVSS Score: 9.8</p>
+                    <p>Affected Service: OpenSSH 9.2p1 Debian 2+deb12u3 on port 22</p>
+                    <p>Summary: CVE-2023-38408	9.8	https://vulners.com/cve/</p>
+                </div>
                 
-                </table>
-            </div>
-            
+                <div class="vulnerability high-severity">
+                    <h4>CVE-2023-28531</h4>
+                    <p>CVSS Score: 9.8</p>
+                    <p>Affected Service: OpenSSH 9.2p1 Debian 2+deb12u3 on port 22</p>
+                    <p>Summary: CVE-2023-28531	9.8	https://vulners.com/cve/</p>
+                </div>
+                
+                <div class="vulnerability high-severity">
+                    <h4>CVE-2024-6387</h4>
+                    <p>CVSS Score: 8.1</p>
+                    <p>Affected Service: OpenSSH 9.2p1 Debian 2+deb12u3 on port 22</p>
+                    <p>Summary: CVE-2024-6387	8.1	https://vulners.com/cve/</p>
+                </div>
+                
+                <div class="vulnerability medium-severity">
+                    <h4>CVE-2023-51385</h4>
+                    <p>CVSS Score: 6.5</p>
+                    <p>Affected Service: OpenSSH 9.2p1 Debian 2+deb12u3 on port 22</p>
+                    <p>Summary: CVE-2023-51385	6.5	https://vulners.com/cve/</p>
+                </div>
+                
+                <div class="vulnerability medium-severity">
+                    <h4>CVE-2023-48795</h4>
+                    <p>CVSS Score: 5.9</p>
+                    <p>Affected Service: OpenSSH 9.2p1 Debian 2+deb12u3 on port 22</p>
+                    <p>Summary: CVE-2023-48795	5.9	https://vulners.com/cve/</p>
+                </div>
+                
+                <div class="vulnerability medium-severity">
+                    <h4>CVE-2023-51384</h4>
+                    <p>CVSS Score: 5.5</p>
+                    <p>Affected Service: OpenSSH 9.2p1 Debian 2+deb12u3 on port 22</p>
+                    <p>Summary: CVE-2023-51384	5.5	https://vulners.com/cve/</p>
+                </div>
+                </div>
             <div class="host-section">
-                <h2>Host: 192.168.1.70</h2>
-                <p>Hostname: Daniel-s-Tab-S9.lan</p>
+                <h2>Host: 192.168.1.65</h2>
+                <p>Hostname: </p>
                 <p>State: up</p>
+                <p>MAC Address: 62:B6:09:7C:15:B0</p>
+                <p>Vendor: N/A</p>
                 
-                <h3>Open Ports:</h3>
+                <h3>Open Ports and Services:</h3>
                 <table>
                     <tr>
                         <th>Port</th>
@@ -71,17 +124,17 @@
                         <th>Service</th>
                         <th>Version</th>
                         <th>Product</th>
+                        <th>Extra Info</th>
                     </tr>
-            
-                </table>
-            </div>
-            
+        </table></div>
             <div class="host-section">
                 <h2>Host: 192.168.1.88</h2>
                 <p>Hostname: </p>
                 <p>State: up</p>
+                <p>MAC Address: 64:BB:1E:9E:F8:51</p>
+                <p>Vendor: Earda Technologies</p>
                 
-                <h3>Open Ports:</h3>
+                <h3>Open Ports and Services:</h3>
                 <table>
                     <tr>
                         <th>Port</th>
@@ -89,17 +142,17 @@
                         <th>Service</th>
                         <th>Version</th>
                         <th>Product</th>
+                        <th>Extra Info</th>
                     </tr>
-            
-                </table>
-            </div>
-            
+        </table></div>
             <div class="host-section">
                 <h2>Host: 192.168.1.90</h2>
                 <p>Hostname: HP86059E.lan</p>
                 <p>State: up</p>
+                <p>MAC Address: AC:E2:D3:86:05:9E</p>
+                <p>Vendor: Hewlett Packard</p>
                 
-                <h3>Open Ports:</h3>
+                <h3>Open Ports and Services:</h3>
                 <table>
                     <tr>
                         <th>Port</th>
@@ -107,41 +160,26 @@
                         <th>Service</th>
                         <th>Version</th>
                         <th>Product</th>
+                        <th>Extra Info</th>
                     </tr>
-            
+        
                     <tr>
                         <td>80</td>
                         <td>open</td>
                         <td>http</td>
                         <td></td>
                         <td>nginx</td>
-                    </tr>
-                
-                    <tr>
-                        <td>443</td>
-                        <td>open</td>
-                        <td>http</td>
                         <td></td>
-                        <td>nginx</td>
                     </tr>
-                
-                    <tr>
-                        <td>631</td>
-                        <td>open</td>
-                        <td>http</td>
-                        <td></td>
-                        <td>nginx</td>
-                    </tr>
-                
-                </table>
-            </div>
-            
+            </table></div>
             <div class="host-section">
                 <h2>Host: 192.168.1.96</h2>
                 <p>Hostname: GEModule613C.lan</p>
                 <p>State: up</p>
+                <p>MAC Address: FC:B9:7E:06:61:3C</p>
+                <p>Vendor: GE Appliances</p>
                 
-                <h3>Open Ports:</h3>
+                <h3>Open Ports and Services:</h3>
                 <table>
                     <tr>
                         <th>Port</th>
@@ -149,17 +187,17 @@
                         <th>Service</th>
                         <th>Version</th>
                         <th>Product</th>
+                        <th>Extra Info</th>
                     </tr>
-            
-                </table>
-            </div>
-            
+        </table></div>
             <div class="host-section">
                 <h2>Host: 192.168.1.139</h2>
                 <p>Hostname: </p>
                 <p>State: up</p>
+                <p>MAC Address: 7C:27:BC:13:34:3D</p>
+                <p>Vendor: Hui Zhou Gaoshengda Technology</p>
                 
-                <h3>Open Ports:</h3>
+                <h3>Open Ports and Services:</h3>
                 <table>
                     <tr>
                         <th>Port</th>
@@ -167,17 +205,17 @@
                         <th>Service</th>
                         <th>Version</th>
                         <th>Product</th>
+                        <th>Extra Info</th>
                     </tr>
-            
-                </table>
-            </div>
-            
+        </table></div>
             <div class="host-section">
                 <h2>Host: 192.168.1.234</h2>
                 <p>Hostname: </p>
                 <p>State: up</p>
+                <p>MAC Address: 60:74:F4:1F:BD:F6</p>
+                <p>Vendor: Private</p>
                 
-                <h3>Open Ports:</h3>
+                <h3>Open Ports and Services:</h3>
                 <table>
                     <tr>
                         <th>Port</th>
@@ -185,17 +223,17 @@
                         <th>Service</th>
                         <th>Version</th>
                         <th>Product</th>
+                        <th>Extra Info</th>
                     </tr>
-            
-                </table>
-            </div>
-            
+        </table></div>
             <div class="host-section">
                 <h2>Host: 192.168.1.254</h2>
                 <p>Hostname: </p>
                 <p>State: up</p>
+                <p>MAC Address: B4:63:6F:05:72:12</p>
+                <p>Vendor: Nokia Solutions and Networks GmbH & KG</p>
                 
-                <h3>Open Ports:</h3>
+                <h3>Open Ports and Services:</h3>
                 <table>
                     <tr>
                         <th>Port</th>
@@ -203,49 +241,50 @@
                         <th>Service</th>
                         <th>Version</th>
                         <th>Product</th>
+                        <th>Extra Info</th>
                     </tr>
-            
+        
                     <tr>
                         <td>53</td>
                         <td>open</td>
                         <td>domain</td>
                         <td>2.89</td>
                         <td>dnsmasq</td>
+                        <td></td>
                     </tr>
-                
+            
                     <tr>
                         <td>80</td>
                         <td>open</td>
                         <td>http</td>
                         <td>1.4.69</td>
                         <td>lighttpd</td>
-                    </tr>
-                
-                    <tr>
-                        <td>111</td>
-                        <td>filtered</td>
-                        <td>rpcbind</td>
-                        <td></td>
                         <td></td>
                     </tr>
+            </table>
+<h3>Identified Vulnerabilities:</h3>
+                <div class="vulnerability high-severity">
+                    <h4>CVE-2023-50387</h4>
+                    <p>CVSS Score: 7.5</p>
+                    <p>Affected Service: dnsmasq 2.89 on port 53</p>
+                    <p>Summary: CVE-2023-50387	7.5	https://vulners.com/cve/</p>
+                </div>
                 
-                    <tr>
-                        <td>443</td>
-                        <td>open</td>
-                        <td>http</td>
-                        <td>1.4.69</td>
-                        <td>lighttpd</td>
-                    </tr>
-                
-                </table>
-            </div>
-            
+                <div class="vulnerability high-severity">
+                    <h4>CVE-2023-28450</h4>
+                    <p>CVSS Score: 7.5</p>
+                    <p>Affected Service: dnsmasq 2.89 on port 53</p>
+                    <p>Summary: CVE-2023-28450	7.5	https://vulners.com/cve/</p>
+                </div>
+                </div>
             <div class="host-section">
                 <h2>Host: 192.168.1.86</h2>
                 <p>Hostname: host.docker.internal</p>
                 <p>State: up</p>
+                <p>MAC Address: N/A</p>
+                <p>Vendor: N/A</p>
                 
-                <h3>Open Ports:</h3>
+                <h3>Open Ports and Services:</h3>
                 <table>
                     <tr>
                         <th>Port</th>
@@ -253,49 +292,17 @@
                         <th>Service</th>
                         <th>Version</th>
                         <th>Product</th>
+                        <th>Extra Info</th>
                     </tr>
-            
-                    <tr>
-                        <td>135</td>
-                        <td>open</td>
-                        <td>msrpc</td>
-                        <td></td>
-                        <td>Microsoft Windows RPC</td>
-                    </tr>
-                
-                    <tr>
-                        <td>137</td>
-                        <td>filtered</td>
-                        <td>netbios-ns</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                
-                    <tr>
-                        <td>139</td>
-                        <td>open</td>
-                        <td>netbios-ssn</td>
-                        <td></td>
-                        <td>Microsoft Windows netbios-ssn</td>
-                    </tr>
-                
-                    <tr>
-                        <td>445</td>
-                        <td>open</td>
-                        <td>microsoft-ds</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                
-                </table>
-            </div>
-            
+        </table></div>
             <div class="host-section">
                 <h2>Host: 192.168.1.87</h2>
                 <p>Hostname: </p>
                 <p>State: up</p>
+                <p>MAC Address: N/A</p>
+                <p>Vendor: N/A</p>
                 
-                <h3>Open Ports:</h3>
+                <h3>Open Ports and Services:</h3>
                 <table>
                     <tr>
                         <th>Port</th>
@@ -303,35 +310,9 @@
                         <th>Service</th>
                         <th>Version</th>
                         <th>Product</th>
+                        <th>Extra Info</th>
                     </tr>
+        </table></div>
+            </body>
+            </html>
             
-                    <tr>
-                        <td>135</td>
-                        <td>open</td>
-                        <td>msrpc</td>
-                        <td></td>
-                        <td>Microsoft Windows RPC</td>
-                    </tr>
-                
-                    <tr>
-                        <td>137</td>
-                        <td>filtered</td>
-                        <td>netbios-ns</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                
-                    <tr>
-                        <td>445</td>
-                        <td>open</td>
-                        <td>microsoft-ds</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                
-                </table>
-            </div>
-            
-        </body>
-        </html>
-        
