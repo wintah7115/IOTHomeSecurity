@@ -52,6 +52,7 @@ source tmp/.venv/bin/activate
 - then run
 ```bash
 pipenv install
+pip install requests
 ```
 
 - modify .env file in Scripts folder with the following format:
@@ -66,7 +67,7 @@ NESSUS_PASSWORD = "{YOUR NESSUS PASSWORD}"
 #Scan Access
 SCAN_NAME = "{NAME OF YOUR NMAP SCAN}"
 USER = '{YOUR PI USERNAME}'
-REPORT_NAME = 'IOTScan_report.html'
+REPORT_NAME = '{SCAN NAME}_report.html'
 NET_SCAN_NAME = "Network Scan"
 NET_REPORT_NAME = 'nmap_report.html'
 
