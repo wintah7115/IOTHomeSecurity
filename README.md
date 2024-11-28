@@ -39,7 +39,7 @@ cd IOTHomeSecurity
 ```
 - download python & pipenv using
 ```bash
-sudo apt-get install -y pipenv python3 pip python-is-python3 python3.11-venv python3-nmap
+sudo apt-get install -y pipenv python3 pip python-is-python3 python3.11-venv 
 ```
 - Make a Virtual Enviroment
 ``` bashe
@@ -52,7 +52,7 @@ source tmp/.venv/bin/activate
 - then run
 ```bash
 pipenv install
-pip install requests
+pip install requests python-nmap
 ```
 
 - modify .env file in Scripts folder with the following format:
