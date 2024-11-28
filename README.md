@@ -45,16 +45,8 @@ source tmp/.venv/bin/activate
 ```bash
 sudo apt-get install pipenv
 ```
-- then run
-```bash
-pipenv install
-```
-- then run 
-```bash
-pipenv run python exportscanreport.py
-```
 
-- create .env file in Scripts folder with the following format:
+- modify .env file in Scripts folder with the following format:
 ```bash
 NESSUS_URL = https:// **URL TO YOUR NESSUS SERVER** :8834/
 
@@ -75,4 +67,12 @@ EMAIL_ADDRESS = 'iot.homenetwork.notifications@gmail.com'
 EMAIL_PASS = 'jacl pxpa konp isah'
 
 REPORT_NAME = 'test_report.html'
+```
+- then run
+```bash
+pipenv install
+```
+- then run 
+```bash
+pipenv run python exportscanreport.py
 ```
