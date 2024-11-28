@@ -37,13 +37,21 @@ https://myaccount.google.com/apppasswords
 git clone https://github.com/wintah7115/IOTHomeSecurity
 cd IOTHomeSecurity
 ```
+- download python & pipenv using
+```bash
+sudo apt-get install -y pipenv python3 pip python-is-python3 python3.11-venv
+```
+- Make a Virtual Enviroment
+``` bashe
+python -m venv ./tmp/.venv/
+```
 - Enter the python virtual enviroment
 ``` bash
 source tmp/.venv/bin/activate
 ```
-- download pipenv using
+- then run
 ```bash
-sudo apt-get install pipenv
+pipenv install
 ```
 
 - modify .env file in Scripts folder with the following format:
@@ -70,10 +78,7 @@ NMAP_PORTS = '1-65535' #Ports
 NMAP_ARGS = "--privileged -sS -sV -A -T4"           # Scan arguments
 NMAP_REPORT = "nmap_report.html" # Report filename
 ```
-- then run
-```bash
-pipenv install
-```
+
 - then run 
 ```bash
 pipenv run python exportscanreport.py
