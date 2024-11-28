@@ -48,25 +48,27 @@ sudo apt-get install pipenv
 
 - modify .env file in Scripts folder with the following format:
 ```bash
-NESSUS_URL = https:// **URL TO YOUR NESSUS SERVER** :8834/
+#Nessus Access Codes
+NESSUS_URL = https://{YOUR IP}:8834/
+ACCESS_KEY = {YOUR ACCESS KEY}
+SECRET_KEY = {YOUR SECRET KEY}
+NESSUS_USERNAME = "{YOUR NESSUS USER}"
+NESSUS_PASSWORD = "{YOUR NESSUS PASSWORD}"
 
-ACCESS_KEY = access_key
+#Scan Access
+SCAN_NAME = "IOTScan"
+USER = {YOUR PI USERNAME}
+REPORT_NAME = 'IOTScan_report.html'
+NET_SCAN_NAME = "Network Scan"
+NET_REPORT_NAME = 'nmap_report.html'
 
-SECRET_KEY = secret_key
-
-NESSUS_USERNAME = Nessus_user
-
-NESSUS_PASSWORD = Pass
-
-SCAN_NAME = "test"
-
-USER = IOTPI
-
-EMAIL_ADDRESS = 'iot.homenetwork.notifications@gmail.com'
-
-EMAIL_PASS = 'jacl pxpa konp isah'
-
-REPORT_NAME = 'test_report.html'
+#Email Acces
+EMAIL_ADDRESS = '{YOUR EMAIL ADDRESS}'
+EMAIL_PASS = '{YOUR EMAIL API KEY}'
+NMAP_TARGET = ""  # Your network range
+NMAP_PORTS = '1-65535' #Ports
+NMAP_ARGS = "--privileged -sS -sV -A -T4"           # Scan arguments
+NMAP_REPORT = "nmap_report.html" # Report filename
 ```
 - then run
 ```bash
