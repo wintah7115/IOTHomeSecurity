@@ -8,7 +8,7 @@ class NmapScanner:
     def __init__(self):
         self.scanner = nmap.PortScanner()
         
-    def scan_network(self, target: str, ports: str = "1-1024", arguments: str = "-sV -sS") -> Dict:
+    def scan_network(self, target: str, ports: str, arguments: str) -> Dict:
         """
         Perform a network scan using Nmap.
         
