@@ -37,6 +37,10 @@ https://myaccount.google.com/apppasswords
 git clone https://github.com/wintah7115/IOTHomeSecurity
 cd IOTHomeSecurity
 ```
+- Enter the python virtual enviroment
+``` bash
+source tmp/.venv/bin/activate
+```
 - download pipenv using
 ```bash
 sudo apt-get install pipenv
