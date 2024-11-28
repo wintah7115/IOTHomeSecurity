@@ -53,6 +53,7 @@ source tmp/.venv/bin/activate
 ```bash
 pipenv install
 pip install requests python-nmap
+sudo setcap cap_net_raw,cap_net_admin,cap_net_bind_service+eip $(which nmap)
 ```
 
 - modify .env file in Scripts folder with the following format:
