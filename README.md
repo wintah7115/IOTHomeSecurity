@@ -39,7 +39,7 @@ cd IOTHomeSecurity
 ```
 - download python & pipenv using
 ```bash
-sudo apt-get install -y pipenv python3 pip python-is-python3 python3.11-venv
+sudo apt-get install -y pipenv python3 pip python-is-python3 python3.11-venv python3-nmap
 ```
 - Make a Virtual Enviroment
 ``` bashe
