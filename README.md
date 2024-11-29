@@ -81,6 +81,12 @@ NMAP_ARGS = "--privileged -sS -sV -A -T4"           # Scan arguments
 NMAP_REPORT = "nmap_report.html" # Report filename
 ```
 # Automate Scan reports
+- Navigate to IOTHomeSecurity/Scripts/
+- nano into both cronscript files and change the file path to your IOTHomeSecurity location
+``` bash
+source PATH/TO/FOLDER/IOTHomeSecurity/tmp/.venv/bin/activate
+cd PATH/TO/FOLDER/IOTHomeSecurity/Scripts
+```
 - Adding tasks to crontab
 ```bash
 crontab -e
