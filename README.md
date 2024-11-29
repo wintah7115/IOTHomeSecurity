@@ -87,6 +87,6 @@ crontab -e
 ```
 - Add these to the bottom line of the file
 ``` bash
-Path/To/IOTHomeSecurity/Scripts/nmap_cronscript.sh
-Path/To/IOTHomeSecurity/Scripts/cronscript.sh
+* * * * * Path/To/IOTHomeSecurity/Scripts/nmap_cronscript.sh
+* * * * * Path/To/IOTHomeSecurity/Scripts/cronscript.sh
 ```
