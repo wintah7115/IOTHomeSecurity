@@ -80,8 +80,13 @@ NMAP_PORTS = '1-65535' #Ports
 NMAP_ARGS = "--privileged -sS -sV -A -T4"           # Scan arguments
 NMAP_REPORT = "nmap_report.html" # Report filename
 ```
-
-- then run 
+# Automate Scan reports
+- Adding tasks to crontab
 ```bash
-pipenv run python exportscanreport.py
+crontab -e
+```
+- Add these to the bottom line of the file
+``` bash
+Path/To/IOTHomeSecurity/Scripts/nmap_cronscript.sh
+Path/To/IOTHomeSecurity/Scripts/cronscript.sh
 ```
