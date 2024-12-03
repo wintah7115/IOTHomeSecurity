@@ -96,3 +96,6 @@ crontab -e
 * 8 * * * Path/To/IOTHomeSecurity/Scripts/nmap_cronscript.sh # will run at 8 am
 * 8 * * * Path/To/IOTHomeSecurity/Scripts/cronscript.sh
 ```
+Thanks to:
+https://github.com/mf210/nessus-automation/blob/main/README.md?plain=1
+For code to troubleshoot nessus automation.
