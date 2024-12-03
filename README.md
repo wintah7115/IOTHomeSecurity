@@ -56,7 +56,7 @@ pip install requests python-nmap
 sudo setcap cap_net_raw,cap_net_admin,cap_net_bind_service+eip $(which nmap)
 ```
 
-- modify .env file in Scripts folder with the following format:
+- modify .env file with the following format:
 ```bash
 #Nessus Access Codes
 NESSUS_URL = https://{YOUR IP}:8834/
