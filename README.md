@@ -98,4 +98,4 @@ crontab -e
 ```
 Thanks to:
 https://github.com/mf210/nessus-automation/blob/main/README.md?plain=1
-For code to troubleshoot nessus automation.
+For code to assist with nessus automation.
