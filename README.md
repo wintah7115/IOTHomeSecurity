@@ -79,6 +79,7 @@ NMAP_TARGET = ""  # Your network range
 NMAP_PORTS = '1-65535' #Ports
 NMAP_ARGS = "--privileged -sS -sV -A -T4"           # Scan arguments
 NMAP_REPORT = "nmap_report.html" # Report filename
+SHODAN_API_KEY='{YOUR SHODAN API KEY}'
 ```
 # Automate Scan reports
 - Navigate to IOTHomeSecurity/Scripts/
