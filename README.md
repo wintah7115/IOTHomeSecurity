@@ -1,6 +1,14 @@
 # IOTHomeSecurity
 Home Security System for IOT Sec on RPI 4!
 
+# Make Shodan Account
+- Navigate to
+``` bash
+https://account.shodan.io/login
+```
+- Make an account or login
+- Navigate to the account page and copy down your API key
+
 # Installing Nessus
 - Navigate to this link to download Nessus for your RPI (Select Linux - Ubuntu - aarch64):
 ``` bash
