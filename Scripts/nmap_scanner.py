@@ -46,7 +46,7 @@ class VulnerabilityScanner:
             # Convert raw Nmap results into structured data
             results = self._process_results(scan_results)
             
-            # Enrich scan data with Shodan vulnerability information if API key available
+            # Include Shodan vulnerability information if API key available
             for host in results['hosts']:
                 if self.shodan_api_key:
                     try:
